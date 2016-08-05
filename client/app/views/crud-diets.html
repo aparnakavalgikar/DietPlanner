@@ -1,0 +1,46 @@
+
+<div class="contaier col-md-12">
+	<p>Please Select Food type</p>
+	<a href="" class="btn btn-info btn-sm">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a><br/>
+	<input type="radio" ng-model="foodtype" id="foodtype" name="foodtype" value="veg" checked>Vegetarian<br/>
+	<input type="radio" ng-model="foodtype" id="foodtype" name="foodtype" value="nonveg" >Non-Vegetarian<br/>
+	<br/>
+	
+	<p>Please Select Goal type</p>
+	<a href="" class="btn btn-info btn-sm">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a><br/>
+	<input type="radio" ng-model="goaltype" id="goaltype" name="goaltype" value="weightGain" checked>Gain Weight<br/>
+	<input type="radio" ng-model="goaltype" id="goaltype" name="goaltype" value="weightLose">Lose Weight<br/>
+	<input type="radio" ng-model="goaltype" id="goaltype" name="goaltype" value="maintain" checked>Maintain<br/>
+	
+	<button class="btn btn-primary btn-block" id="submit" ng-click="onSubmit()">Submit</button>
+	<div ng-show="showDiet">
+		<a href="" ng-click="editable()" class="btn btn-info btn-lg">
+			<span class="glyphicon glyphicon-plus"></span>
+		</a><br/>
+		<h3>Breakfast:</h3>
+			Food: <input type="text" ng-model="bfood" id="bfood" placeholder="Breakfast" ng-readonly="editDiet" />
+			Number of Servings: <input type="text" ng-model="bserv" id="bserv" placeholder="Servings" ng-readonly="editDiet"/>
+			Calories: <input type="text" ng-model="bcal" id="bcal" placeholder="Calories" ng-readonly="editDiet" />
+					
+		<h3>Lunch:</h3>
+			Food: <input type="text" ng-model="lfood" id="lfood" placeholder="Lunch" ng-readonly="editDiet" />
+			Number of Servings: <input type="text" ng-model="lserv" id="lserv" placeholder="Servings" ng-readonly="editDiet" />
+			Calories: <input type="text" ng-model="lcal" id="lcal" placeholder="Calories" ng-readonly="editDiet" />
+
+		<h3>Snacks:</h3>
+			Food: <input type="text" ng-model="sfood" id="sfood" placeholder="Snacks" ng-readonly="editDiet" />
+			Number of Servings: <input type="text" ng-model="sserv" id="sserv" placeholder="Servings" ng-readonly="editDiet" />
+			Calories: <input type="text" ng-model="scal" id="scal" placeholder="Calories" ng-readonly="editDiet" />
+
+		<h3>Dinner:</h3>
+			Food: <input type="text" ng-model="dfood" id="dfood" placeholder="Dinner" ng-readonly="editDiet" />
+			Number of Servings: <input type="text" ng-model="dserv" id="dserv" placeholder="Servings" ng-readonly="editDiet" />
+			Calories: <input type="text" ng-model="dcal" id="dcal" placeholder="Calories" ng-readonly="editDiet" />
+			<br/><br/>
+		<button class="btn btn-primary btn-block" id="editDiet" ng-click="updateDiet()" >{{button}}</button>
+	</div>
+</div>

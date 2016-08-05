@@ -1,0 +1,16 @@
+<div class="contaier col-md-8 signin">
+	<input type="text" ng-model="loginUsername" id="username" placeholder="Email Id/Username" required /><br/>
+	<input type="password" ng-model="loginPassword" id="password" placeholder="Password" required /><br/>
+	<span ng-show="lerror" class="alert alert-danger">{{lerror}}</span><br/>
+	<button class="btn btn-primary btn-block" id="bsignin" ng-click="onSignIn()">Sign In</button>
+	<br/>
+</div>
+
+<div class="contaier col-md-12 signup">
+	<input type="text" ng-model="newUsername" placeholder="Email Id/Username" id="username" required /><br/>
+	<input type="password" ng-model="newPassword" placeholder="New Password" id="password" required /><br/>
+	<input type="password" ng-model="newCPassword" placeholder="Confirm Password" id="password" required /><br/>
+	<button class="btn btn-primary btn-block" id="bsignup" ng-click="onSignUp()">Sign Up</button>
+	<span ng-show="message" class="alert alert-success">{{message}}</span><br/>
+	<span ng-show="rerror" class="alert alert-danger">{{rerror}}</span><br/>
+</div>

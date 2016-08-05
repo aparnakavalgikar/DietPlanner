@@ -1,0 +1,44 @@
+<div class="container col-md-12">
+	<input type="text" ng-model="height" id="height" placeholder="Height" ><br/>
+	<input type="text" ng-model="weight" id="weight" placeholder="Weight" ><br/>
+	<input type="text" ng-model="age" id="age" placeholder="age" ><br/>
+	<input type="radio" ng-model="gender" id="gender" name="gender" value="male" ng-change="showBody()" checked>Male<br/>
+	<input type="radio" ng-model="gender" id="gender" name="gender" value="female" ng-change="showBody()" >Female<br/>	
+	
+	<img src="http://peterandsharda.com/wp-includes/Text/women-body-shapes-pictures-i4.jpg" height="100px" width="200px">
+	<select size="6" ng-model="menBodyShape" ng-show="showMale" required>
+		<option value="inverted">Inverted Triangle</option>
+		<option value="rhomboid">Rhomboid</option>
+		<option value="rectangle">Rectangle</option>
+		<option value="triangle">Triangle</option>
+		<option value="oval">Oval</option>
+	</select>
+	
+	<img src="http://4.bp.blogspot.com/-lHMZU3z5tC8/UOdZskm1cEI/AAAAAAAACzE/vURLoLmHLhM/s1600/body+types-men.jpg" height="100px" width="200px">
+	<select size="5" ng-model="womenBodyShape" ng-show="showFemale" required>
+		<option value="hourglass">Hourglass</option>
+		<option value="inverted">Inverted Triangle</option>
+		<option value="rectangle">Rectangle</option>
+		<option value="triangle">Triangle</option>
+		<option value="apple">Diamond</option>
+		<option value="oval">Oval</option> 
+	</select>
+	
+	<input type="radio" ng-model="foodtype" id="foodtype" name="foodtype" value="veg" checked>Vegetarian<br/>
+	<input type="radio" ng-model="foodtype" id="foodtype" name="foodtype" value="nonveg" >Non-Vegetarian<br/>
+	<br/>
+	<input type="radio" ng-model="exhealth" id="exhealth" name="exhealth" value="diabetes" checked>Diabetes<br/>
+	<input type="radio" ng-model="exhealth" id="exhealth" name="exhealth" value="heartProblems" >Heart Problems<br/>	
+	<input type="radio" ng-model="exhealth" id="exhealth" name="exhealth" value="none" >None<br/>
+	<br/>
+	<input type="radio" ng-model="goaltype" id="goaltype" name="goaltype" value="weightGain" checked>Gain Weight<br/>
+	<input type="radio" ng-model="goaltype" id="goaltype" name="goaltype" value="weightLose">Lose Weight<br/>
+	<input type="radio" ng-model="goaltype" id="goaltype" name="goaltype" value="maintain" checked>Maintain<br/>
+	<br/>	
+	<input type="text" ng-model="goalweight" id="goalweight" placeholder="Goal Weight" required /><br/>
+	
+	<span ng-show="lerror" class="alert alert-danger">{{lerror}}</span><br/>
+	<button class="btn btn-primary btn-block" id="bsignin" ng-click="saveProfile()">Save Profile</button>
+	<span ng-show="message" class="alert alert-success">{{message}}</span><br/>
+	<br/>
+</div>
